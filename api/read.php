@@ -4,7 +4,7 @@ include "../config/koneksi.php";
 
 $data = [];
 
-$query = mysqli_query($kon, "SELECT * FROM 'barang' ORDER BY ID DESC");
+$query = mysqli_query($kon, "SELECT * FROM barang ORDER BY ID ASC");
 if ($query){
 	$status = true;
 	$pesan = "request success";
