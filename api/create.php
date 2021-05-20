@@ -2,13 +2,14 @@
 
 include "../config/koneksi.php";
 
+$ID = @$_POST['ID'];
 $Nama_Barang = @$_POST['Nama_Barang'];
 $Jumlah_Barang = @$_POST['Jumlah_Barang'];
 
 $data = [];
 
-$query = mysqli_query($kon, "INSERT INTO 'barang'( 'Nama_Barang',
-'Jumlah_Barang') VALUES ('". $Nama_Barang ."','". $Jumlah_Barang ."')");
+$query = mysqli_query ($kon, "INSERT INTO barang(ID, Nama_Barang, Jumlah_Barang) 
+VALUES ('$ID', '$Nama_Barang', '$Jumlah_Barang')");
 
 if($query){
 	$status = true;
