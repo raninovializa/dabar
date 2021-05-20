@@ -6,8 +6,8 @@ $ID = @$_POST['ID'];
 
 $data = [];
 
-$query = mysqli_query($kon, "DELETE FROM 'barang' 
-WHERE 'ID'='". $ID ."'");
+$query = mysqli_query($kon, "DELETE FROM barang 
+WHERE ID='$ID'");
 
 if($query){
 	$status = true;
